@@ -1,2 +1,4 @@
 # Ignore all the dependencies
 node_modules/
+# Ignore all the .class file
+*.class
