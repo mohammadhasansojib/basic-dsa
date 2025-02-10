@@ -68,6 +68,22 @@ class BST_Node{
     }
 
   }
+
+  // Minimum value finding method
+  public int find_min(){
+    if(this.left == null)
+      return this.data;
+    else
+     return this.left.find_min();
+  }
+
+  // Maximum value finding method
+  public int find_max(){
+    if(this.right == null)
+      return this.data;
+    else
+      return this.right.find_max();
+  }
 }
 
 class Main{
@@ -88,5 +104,11 @@ class Main{
 
     // searching in tree
     System.out.println("50 exist in tree : " + root.search(50));
+
+    // minimum value in tree
+    System.out.println("Minimum value in tree: " + root.find_min());
+
+    // maximum value in tree
+    System.out.println("Maximum vlaue in tree: " + root.find_max());
   }
 }
